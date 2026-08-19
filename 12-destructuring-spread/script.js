@@ -34,7 +34,7 @@ const media = notas.reduce((soma, nota) => soma + nota, 0) / notas.length
 const alunoAtualizado = {
   ...aluno,
   media,
-  situacao: media.toFixed(2) >= 6 ? 'Aprovado' : 'Reprovado'
+  situacao: media >= 6 ? 'Aprovado' : 'Reprovado'
 }
 
 console.log(JSON.stringify(alunoAtualizado, null, 2))
